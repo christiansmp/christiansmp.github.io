@@ -33,37 +33,44 @@
   <main>
     <!-- Hero Section -->
     <section class="hero">
-      <div class="hero__bg">
+      <div class="hero__artwork">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Bloch-SermonOnTheMount.jpg"
           alt="Sermon on the Mount by Carl Bloch"
-          loading="eager"
         >
       </div>
       <div class="hero__overlay"></div>
 
       <div class="hero__content">
+        <span class="hero__label">A Minecraft Community</span>
         <h1 class="hero__title">Christian SMP</h1>
         <p class="hero__subtitle">
-          A Minecraft community rooted in discipleship, fellowship, creativity, and reverence for Christ.
+          A community rooted in discipleship, fellowship, creativity, and reverence for Christ.
         </p>
         <div class="hero__actions">
           <a href="#join" class="btn btn--primary btn--large">Join the Community</a>
           <a href="about.html" class="btn btn--secondary btn--large">Learn More</a>
         </div>
       </div>
+
+      <div class="hero__scroll">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+
+      <span class="hero__caption">Sermon on the Mount, Carl Bloch (1877)</span>
     </section>
 
     <!-- What is Christian SMP -->
     <section class="section">
       <div class="container container--narrow">
-        <div class="section-header">
+        <div class="section-header reveal">
           <span class="section-header__label">Welcome</span>
           <h2 class="section-header__title">What is Christian SMP?</h2>
         </div>
 
-        <div class="panel panel--lg fade-in">
-          <div class="prose" style="margin: 0 auto;">
+        <div class="panel panel--lg reveal">
+          <div class="prose">
             <p>
               Christian SMP is a Minecraft survival multiplayer community where believers gather to build,
               create, and fellowship together under the lordship of Christ. We exist not merely to play a game,
@@ -81,9 +88,9 @@
     </section>
 
     <!-- Community Values -->
-    <section class="section bg-pattern">
+    <section class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header section-header--center reveal">
           <span class="section-header__label">Our Foundation</span>
           <h2 class="section-header__title">Community Values</h2>
           <p class="section-header__text">
@@ -91,9 +98,9 @@
           </p>
         </div>
 
-        <div class="grid grid-4">
-          <div class="card fade-in">
-            <div class="card__icon">&#10013;</div>
+        <div class="grid grid-4 reveal-stagger">
+          <div class="card">
+            <span class="card__number">01</span>
             <h3 class="card__title">Discipleship</h3>
             <p class="card__text">
               We follow Christ first. Everything we build and every conversation we have is oriented
@@ -101,8 +108,8 @@
             </p>
           </div>
 
-          <div class="card fade-in">
-            <div class="card__icon">&#9829;</div>
+          <div class="card">
+            <span class="card__number">02</span>
             <h3 class="card__title">Fellowship</h3>
             <p class="card__text">
               We are not merely players on a server but brothers and sisters in Christ.
@@ -110,8 +117,8 @@
             </p>
           </div>
 
-          <div class="card fade-in">
-            <div class="card__icon">&#9733;</div>
+          <div class="card">
+            <span class="card__number">03</span>
             <h3 class="card__title">Creativity</h3>
             <p class="card__text">
               As image-bearers of the Creator, we honor God through building, designing,
@@ -119,8 +126,8 @@
             </p>
           </div>
 
-          <div class="card fade-in">
-            <div class="card__icon">&#9670;</div>
+          <div class="card">
+            <span class="card__number">04</span>
             <h3 class="card__title">Reverence</h3>
             <p class="card__text">
               We approach our community with seriousness and sobriety, understanding that
@@ -131,10 +138,28 @@
       </div>
     </section>
 
+    <!-- Marquee -->
+    <div class="marquee">
+      <div class="marquee__inner">
+        <span class="marquee__item">Discipleship</span>
+        <span class="marquee__item">Fellowship</span>
+        <span class="marquee__item">Creativity</span>
+        <span class="marquee__item">Reverence</span>
+        <span class="marquee__item">Community</span>
+        <span class="marquee__item">Scripture</span>
+        <span class="marquee__item">Discipleship</span>
+        <span class="marquee__item">Fellowship</span>
+        <span class="marquee__item">Creativity</span>
+        <span class="marquee__item">Reverence</span>
+        <span class="marquee__item">Community</span>
+        <span class="marquee__item">Scripture</span>
+      </div>
+    </div>
+
     <!-- Events and Ministries Preview -->
     <section class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header section-header--center reveal">
           <span class="section-header__label">Community Life</span>
           <h2 class="section-header__title">Events and Ministries</h2>
           <p class="section-header__text">
@@ -142,32 +167,35 @@
           </p>
         </div>
 
-        <div class="grid grid-3">
-          <div class="card fade-in">
+        <div class="grid grid-3 reveal-stagger">
+          <div class="card">
+            <span class="card__number">I</span>
             <h3 class="card__title">Bible Study</h3>
             <p class="card__text">
               Weekly gatherings to read and discuss Scripture together, growing in understanding
               and application of God's Word.
             </p>
-            <a href="ministries.html" class="btn btn--secondary mt-6">Learn More</a>
+            <a href="ministries.html" class="btn btn--ghost mt-6">Learn More</a>
           </div>
 
-          <div class="card fade-in">
+          <div class="card">
+            <span class="card__number">II</span>
             <h3 class="card__title">Small Groups</h3>
             <p class="card__text">
               Intimate circles for deeper fellowship, accountability, and prayer.
               A place to be known and to know others.
             </p>
-            <a href="ministries.html" class="btn btn--secondary mt-6">Learn More</a>
+            <a href="ministries.html" class="btn btn--ghost mt-6">Learn More</a>
           </div>
 
-          <div class="card fade-in">
+          <div class="card">
+            <span class="card__number">III</span>
             <h3 class="card__title">Prayer Nights</h3>
             <p class="card__text">
               Dedicated times to bring our requests before the Lord together,
               interceding for one another and the world.
             </p>
-            <a href="ministries.html" class="btn btn--secondary mt-6">Learn More</a>
+            <a href="ministries.html" class="btn btn--ghost mt-6">Learn More</a>
           </div>
         </div>
       </div>
@@ -176,12 +204,12 @@
     <!-- Current Status -->
     <section class="section" id="join">
       <div class="container container--narrow">
-        <div class="section-header">
+        <div class="section-header section-header--center reveal">
           <span class="section-header__label">Server Status</span>
           <h2 class="section-header__title">Join Us</h2>
         </div>
 
-        <div class="status-card fade-in">
+        <div class="status-card reveal">
           <div class="status-card__badge">
             Coming Soon
           </div>
@@ -193,18 +221,18 @@
             <a href="#" class="btn btn--secondary">Apply for Whitelist</a>
           </div>
 
-          <p class="text-muted text-small mt-6">
+          <p class="text-muted text-sm mt-6">
             Server launch date to be announced. Join our Discord for updates.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Artwork Section -->
+    <!-- Featured Artwork -->
     <section class="section">
       <div class="container">
-        <div class="grid grid-2" style="gap: var(--space-8);">
-          <div class="art-block fade-in">
+        <div class="grid grid-2" style="gap: var(--space-8); align-items: center;">
+          <div class="art-block reveal">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Gerard_van_Honthorst_-_Christ_before_the_High_Priest_-_WGA11650.jpg"
               alt="Christ before the High Priest by Gerard van Honthorst"
@@ -215,8 +243,9 @@
             </div>
           </div>
 
-          <div class="panel panel--lg fade-in flex flex-col justify-center">
-            <h3 class="mb-6">A Space Set Apart</h3>
+          <div class="reveal">
+            <span class="section-header__label">A Space Set Apart</span>
+            <h3 class="mt-4 mb-8">Enter a Different Kind of Community</h3>
             <div class="prose">
               <p>
                 In an age of distraction and noise, we seek to create a space where believers
@@ -228,7 +257,7 @@
                 marked by peace, purpose, and the presence of God.
               </p>
             </div>
-            <a href="about.html" class="btn btn--secondary mt-8" style="align-self: flex-start;">
+            <a href="about.html" class="btn btn--secondary mt-8">
               Read Our Story
             </a>
           </div>

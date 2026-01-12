@@ -33,27 +33,29 @@
   <main>
     <!-- Hero Section -->
     <section class="hero hero--page">
-      <div class="hero__bg">
+      <div class="hero__artwork">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Duccio_di_Buoninsegna_-_Appearance_on_the_Road_to_Emmaus_-_Google_Art_Project.jpg"
           alt="Appearance on the Road to Emmaus by Duccio di Buoninsegna"
-          loading="eager"
         >
       </div>
       <div class="hero__overlay"></div>
 
       <div class="hero__content">
+        <span class="hero__label">Community Life</span>
         <h1 class="hero__title">Ministries</h1>
         <p class="hero__subtitle">
           Growing together in faith through study, prayer, and fellowship.
         </p>
       </div>
+
+      <span class="hero__caption">Road to Emmaus, Duccio di Buoninsegna (c. 1308-1311)</span>
     </section>
 
     <!-- Ministry Areas -->
     <section class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header section-header--center reveal">
           <span class="section-header__label">Community Life</span>
           <h2 class="section-header__title">Ministry Areas</h2>
           <p class="section-header__text">
@@ -61,9 +63,9 @@
           </p>
         </div>
 
-        <div class="grid grid-2" style="gap: var(--space-8);">
-          <div class="card panel--accent fade-in">
-            <div class="card__icon">&#128214;</div>
+        <div class="grid grid-2 reveal-stagger" style="gap: var(--space-8);">
+          <div class="card">
+            <span class="card__number">I</span>
             <h3 class="card__title">Bible Study</h3>
             <p class="card__text">
               We gather weekly to read and study Scripture together. These are not lectures
@@ -85,8 +87,8 @@
             </ul>
           </div>
 
-          <div class="card panel--accent fade-in">
-            <div class="card__icon">&#9829;</div>
+          <div class="card">
+            <span class="card__number">II</span>
             <h3 class="card__title">Small Groups</h3>
             <p class="card__text">
               Small groups are intimate circles of 4-8 members who meet regularly for
@@ -108,8 +110,8 @@
             </ul>
           </div>
 
-          <div class="card panel--accent fade-in">
-            <div class="card__icon">&#128591;</div>
+          <div class="card">
+            <span class="card__number">III</span>
             <h3 class="card__title">Prayer Nights</h3>
             <p class="card__text">
               Dedicated times to bring our requests before the Lord together. We intercede
@@ -130,8 +132,8 @@
             </ul>
           </div>
 
-          <div class="card panel--accent fade-in">
-            <div class="card__icon">&#9733;</div>
+          <div class="card">
+            <span class="card__number">IV</span>
             <h3 class="card__title">Testimonies</h3>
             <p class="card__text">
               Regular opportunities for members to share what God is doing in their lives.
@@ -155,10 +157,28 @@
       </div>
     </section>
 
+    <!-- Marquee -->
+    <div class="marquee">
+      <div class="marquee__inner">
+        <span class="marquee__item">Bible Study</span>
+        <span class="marquee__item">Small Groups</span>
+        <span class="marquee__item">Prayer</span>
+        <span class="marquee__item">Testimonies</span>
+        <span class="marquee__item">Fellowship</span>
+        <span class="marquee__item">Discipleship</span>
+        <span class="marquee__item">Bible Study</span>
+        <span class="marquee__item">Small Groups</span>
+        <span class="marquee__item">Prayer</span>
+        <span class="marquee__item">Testimonies</span>
+        <span class="marquee__item">Fellowship</span>
+        <span class="marquee__item">Discipleship</span>
+      </div>
+    </div>
+
     <!-- How Ministry Works Online -->
-    <section class="section bg-pattern">
+    <section class="section">
       <div class="container container--narrow">
-        <div class="content-block fade-in">
+        <div class="content-block reveal">
           <span class="section-header__label">Online Fellowship</span>
           <h2 class="content-block__title mt-4">How Ministry Works Online</h2>
           <div class="prose">
@@ -188,7 +208,7 @@
         </div>
 
         <!-- Artwork -->
-        <div class="art-block mt-12 fade-in">
+        <div class="art-block mt-12 reveal">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Alexandr_Ivanov_-_Christ%27s_Appearance_to_Mary_Magdalene_after_the_Resurrection_-_Google_Art_Project.jpg"
             alt="Christ's Appearance to Mary Magdalene by Alexander Ivanov"
@@ -204,7 +224,7 @@
     <!-- Join a Group -->
     <section class="section">
       <div class="container container--narrow">
-        <div class="callout fade-in">
+        <div class="callout reveal">
           <h3 class="callout__title">Join a Group</h3>
           <p class="callout__text">
             Ready to go deeper? Join one of our small groups or ministry gatherings.
@@ -213,7 +233,7 @@
           <a href="#" class="btn btn--primary btn--large">
             Join Our Discord
           </a>
-          <p class="text-muted text-small mt-4">
+          <p class="text-muted text-sm mt-4">
             Ministry signups happen in our Discord server
           </p>
         </div>
@@ -221,9 +241,9 @@
     </section>
 
     <!-- Additional Info -->
-    <section class="section bg-pattern">
+    <section class="section">
       <div class="container container--narrow">
-        <div class="content-block fade-in">
+        <div class="content-block reveal">
           <span class="section-header__label">Participation</span>
           <h2 class="content-block__title mt-4">Getting Involved</h2>
           <div class="prose">
@@ -247,20 +267,20 @@
           </div>
         </div>
 
-        <div class="grid grid-3 mt-12">
-          <div class="panel panel--sm text-center fade-in">
-            <p class="text-accent text-large font-serif mb-2">Weekly</p>
-            <p class="text-secondary text-small">Bible Studies</p>
+        <div class="grid grid-3 mt-12 reveal-stagger">
+          <div class="panel panel--sm text-center">
+            <p class="text-lg font-serif mb-2">Weekly</p>
+            <p class="text-secondary text-sm">Bible Studies</p>
           </div>
 
-          <div class="panel panel--sm text-center fade-in">
-            <p class="text-accent text-large font-serif mb-2">Monthly</p>
-            <p class="text-secondary text-small">Prayer Nights</p>
+          <div class="panel panel--sm text-center">
+            <p class="text-lg font-serif mb-2">Monthly</p>
+            <p class="text-secondary text-sm">Prayer Nights</p>
           </div>
 
-          <div class="panel panel--sm text-center fade-in">
-            <p class="text-accent text-large font-serif mb-2">Ongoing</p>
-            <p class="text-secondary text-small">Small Groups</p>
+          <div class="panel panel--sm text-center">
+            <p class="text-lg font-serif mb-2">Ongoing</p>
+            <p class="text-secondary text-sm">Small Groups</p>
           </div>
         </div>
       </div>

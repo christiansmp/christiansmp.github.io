@@ -6,21 +6,21 @@
    CSS VARIABLES
    ------------------------------------------------------------ */
 :root {
-  /* Colors - Monochrome only */
-  --color-bg: #0a0a0a;
-  --color-bg-elevated: #111111;
-  --color-surface: rgba(255, 255, 255, 0.03);
-  --color-surface-hover: rgba(255, 255, 255, 0.06);
-  --color-surface-active: rgba(255, 255, 255, 0.08);
+  /* Colors - Medium grey with warmth */
+  --color-bg: #3a3a3a;
+  --color-bg-elevated: #454545;
+  --color-surface: rgba(255, 255, 255, 0.05);
+  --color-surface-hover: rgba(255, 255, 255, 0.08);
+  --color-surface-active: rgba(255, 255, 255, 0.12);
 
-  --color-border: rgba(255, 255, 255, 0.06);
-  --color-border-hover: rgba(255, 255, 255, 0.12);
-  --color-border-strong: rgba(255, 255, 255, 0.2);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-hover: rgba(255, 255, 255, 0.18);
+  --color-border-strong: rgba(255, 255, 255, 0.25);
 
-  --color-text: #ffffff;
-  --color-text-secondary: rgba(255, 255, 255, 0.7);
-  --color-text-muted: rgba(255, 255, 255, 0.4);
-  --color-text-faint: rgba(255, 255, 255, 0.2);
+  --color-text: #f5f5f5;
+  --color-text-secondary: rgba(255, 255, 255, 0.75);
+  --color-text-muted: rgba(255, 255, 255, 0.5);
+  --color-text-faint: rgba(255, 255, 255, 0.3);
 
   /* Typography */
   --font-serif: 'Georgia', 'Times New Roman', serif;
@@ -108,15 +108,16 @@ body {
   overflow-x: hidden;
 }
 
-/* Global noise overlay */
+/* Global noise overlay - visible grain for nostalgic feel */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   background: var(--noise);
-  opacity: 0.03;
+  opacity: 0.15;
   pointer-events: none;
   z-index: 10000;
+  mix-blend-mode: overlay;
 }
 
 img {
@@ -265,7 +266,7 @@ p {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(10, 10, 10, 0.8);
+  background: rgba(58, 58, 58, 0.9);
   backdrop-filter: blur(var(--blur-md));
   -webkit-backdrop-filter: blur(var(--blur-md));
   opacity: 0;
@@ -430,11 +431,11 @@ p {
   z-index: -1;
   background:
     linear-gradient(180deg,
-      rgba(10, 10, 10, 0) 0%,
-      rgba(10, 10, 10, 0) 40%,
-      rgba(10, 10, 10, 0.4) 60%,
-      rgba(10, 10, 10, 0.95) 85%,
-      rgba(10, 10, 10, 1) 100%
+      rgba(58, 58, 58, 0) 0%,
+      rgba(58, 58, 58, 0) 30%,
+      rgba(58, 58, 58, 0.3) 50%,
+      rgba(58, 58, 58, 0.85) 80%,
+      rgba(58, 58, 58, 1) 100%
     );
 }
 
@@ -446,8 +447,8 @@ p {
   background: radial-gradient(
     ellipse at center,
     transparent 0%,
-    transparent 50%,
-    rgba(10, 10, 10, 0.3) 100%
+    transparent 40%,
+    rgba(58, 58, 58, 0.4) 100%
   );
   pointer-events: none;
 }
@@ -619,8 +620,9 @@ p {
   position: absolute;
   inset: 0;
   background: var(--noise);
-  opacity: 0.02;
+  opacity: 0.08;
   pointer-events: none;
+  mix-blend-mode: overlay;
 }
 
 .panel--sm { padding: var(--space-6); }
@@ -666,8 +668,9 @@ p {
   position: absolute;
   inset: 0;
   background: var(--noise);
-  opacity: 0.015;
+  opacity: 0.06;
   pointer-events: none;
+  mix-blend-mode: overlay;
 }
 
 .card:hover {
@@ -1022,7 +1025,7 @@ p {
   left: 0;
   right: 0;
   padding: var(--space-8) var(--space-6) var(--space-4);
-  background: linear-gradient(transparent, rgba(10, 10, 10, 0.9));
+  background: linear-gradient(transparent, rgba(58, 58, 58, 0.95));
   font-size: var(--text-xs);
   color: var(--color-text-muted);
   font-style: italic;

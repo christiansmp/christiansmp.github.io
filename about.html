@@ -1,142 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About | Christian SMP</title>
-    <meta
-      name="description"
-      content="Learn about the vision, purpose, and ministry heart behind Christian SMP and its volunteer staff." 
-    />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container inner">
-        <a class="logo" href="index.html">Christian SMP</a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-          Menu
-        </button>
-        <nav class="nav-menu" id="primary-nav">
-          <a href="index.html">Home</a>
-          <a href="about.html" aria-current="page">About</a>
-          <a href="plans.html">Plans</a>
-          <a href="volunteers.html">Volunteers</a>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Christian SMP - our heart, values, and vision for a Christ-centered Minecraft community.">
+  <title>Who We Are - Christian SMP</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-content">
-          <div class="reveal">
-            <p class="label">Ministry Vision</p>
-            <h1>Our purpose is discipleship in community</h1>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="./" class="header__logo">Christian SMP</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="nav" id="main-nav">
+        <a href="./" class="nav__link">Home</a>
+        <a href="about.html" class="nav__link nav__link--active">Who We Are</a>
+        <a href="projects.html" class="nav__link">Projects</a>
+        <a href="volunteers.html" class="nav__link">Volunteers</a>
+        <a href="ministries.html" class="nav__link">Ministries</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero hero--page">
+      <div class="hero__bg">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Giotto_-_Scrovegni_-_-26-_-_Entry_into_Jerusalem.jpg"
+          alt="Entry into Jerusalem by Giotto di Bondone"
+          loading="eager"
+        >
+      </div>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <h1 class="hero__title">Who We Are</h1>
+        <p class="hero__subtitle">
+          A fellowship of believers seeking Christ in all things, including the digital spaces we inhabit.
+        </p>
+      </div>
+    </section>
+
+    <!-- Our Heart -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="content-block fade-in">
+          <span class="section-header__label">Our Heart</span>
+          <h2 class="content-block__title mt-4">Why This Exists</h2>
+          <div class="prose">
             <p>
-              Christian SMP exists so that following Jesus is supported, not lonely. We cultivate a world
-              where believers can grow in faith, strengthen one another, and build with joy.
+              The internet is filled with communities, but so few of them are oriented toward
+              the glory of God. We saw an opportunity to create something different: a Minecraft
+              community where believers could gather not just to play, but to grow.
+            </p>
+            <p>
+              Christian SMP exists because we believe that fellowship matters, even in digital
+              spaces. We believe that creativity is a gift from God, and that building together
+              can be an act of worship. We believe that the body of Christ extends beyond
+              physical church walls into every corner of our lives, including our recreation.
+            </p>
+            <p>
+              This is not an escape from the world but a gathering of pilgrims who carry the
+              light of Christ wherever they go. We are here to encourage one another, to speak
+              truth in love, and to point each other toward the hope we have in Jesus.
             </p>
           </div>
-          <div class="placeholder-art reveal">
-            <div>
-              <p class="label">Art Placeholder</p>
-              <p>Room for classical imagery reflecting the mission.</p>
+        </div>
+
+        <div class="divider divider--accent"></div>
+
+        <!-- Christ at the Center -->
+        <div class="content-block fade-in">
+          <span class="section-header__label">Foundation</span>
+          <h2 class="content-block__title mt-4">Christ at the Center</h2>
+          <div class="prose">
+            <p>
+              <strong>Christ is the head of this community, not any personality, not clout, not power.</strong>
+            </p>
+            <p>
+              We reject the tendency of online communities to form around charismatic leaders
+              or to become platforms for personal brands. Our allegiance is to Jesus Christ alone,
+              and our goal is to point every member toward Him.
+            </p>
+            <p>
+              This means that no one is above correction. No one is too important to serve.
+              And no one is too small to matter. In Christ, we are all brothers and sisters,
+              and we treat one another accordingly.
+            </p>
+            <p>
+              When decisions are made, they are made prayerfully and according to Scripture.
+              When conflicts arise, they are handled with grace and truth. When we gather,
+              we gather as the body of Christ, each member valued and needed.
+            </p>
+          </div>
+        </div>
+
+        <div class="divider divider--accent"></div>
+
+        <!-- How We Live Together -->
+        <div class="content-block fade-in">
+          <span class="section-header__label">Community Life</span>
+          <h2 class="content-block__title mt-4">How We Live Together</h2>
+          <div class="prose">
+            <p>
+              We are called to walk in a manner worthy of our calling, with all humility
+              and gentleness, bearing with one another in love. This is not merely an ideal
+              but a practice we commit to daily.
+            </p>
+          </div>
+
+          <div class="panel panel--sm mt-8">
+            <h4 class="mb-4">Our Expectations</h4>
+            <ul class="card__list">
+              <li>Speak the truth in love, avoiding gossip and slander</li>
+              <li>Bear with one another's weaknesses with patience</li>
+              <li>Seek reconciliation when conflicts arise, following Matthew 18</li>
+              <li>Encourage and build up, never tearing down</li>
+              <li>Submit to godly leadership and accountability</li>
+              <li>Prioritize the spiritual good of others above personal preferences</li>
+              <li>Maintain purity in speech and conduct</li>
+              <li>Extend grace freely, as we have received grace</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="divider divider--accent"></div>
+
+        <!-- Creative Fellowship -->
+        <div class="content-block fade-in">
+          <span class="section-header__label">Creativity</span>
+          <h2 class="content-block__title mt-4">Creative Fellowship</h2>
+          <div class="prose">
+            <p>
+              Minecraft is not merely a game to us. It is a canvas for the creative impulse
+              that God placed within every human heart. When we build, we imitate our Creator.
+              When we design, we reflect His beauty. When we collaborate, we embody the unity
+              of the body of Christ.
+            </p>
+            <p>
+              We approach building with intention and excellence, not because we seek the
+              praise of others, but because we believe that offering our best is an act of
+              worship. A cathedral built in Minecraft can glorify God just as one built of stone,
+              if the heart behind it is oriented toward Him.
+            </p>
+            <p>
+              Here, creativity is stewardship. The time, talent, and imagination we invest
+              are gifts from God, and we use them for His glory and the encouragement of
+              our brothers and sisters.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artwork Section -->
+    <section class="section bg-pattern">
+      <div class="container">
+        <div class="grid grid-2" style="gap: var(--space-8);">
+          <div class="art-block art-block--portrait fade-in">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/1/13/Adorazione_dei_Magi_-_Gentile_da_Fabriano.jpg"
+              alt="Adoration of the Magi by Gentile da Fabriano"
+              loading="lazy"
+            >
+            <div class="art-block__caption">
+              Adoration of the Magi, Gentile da Fabriano (1423)
+            </div>
+          </div>
+
+          <div class="art-block art-block--portrait fade-in">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Pentecost_-_Lavra.jpg"
+              alt="Pentecost icon"
+              loading="lazy"
+            >
+            <div class="art-block__caption">
+              Pentecost, Orthodox Icon
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section">
-        <div class="container grid cols-2">
-          <div class="panel reveal">
-            <p class="label">Our Heart as Staff</p>
-            <h2>Servants, not titles</h2>
-            <p>
-              Every staff member is a volunteer who plays survival alongside the community. We do not
-              power-trip, we do not chase titles, and we serve because the Father sees what is done in secret.
-            </p>
-            <p>
-              Jesus is the true head of this community. Our goal is to shepherd gently and keep the focus on
-              Christ.
-            </p>
-          </div>
-          <div class="panel reveal">
-            <p class="label">Community Direction</p>
-            <h2>Transparent decisions</h2>
-            <p>
-              Major decisions are communicated clearly. Staff branches discuss and vote with YES / NO / AMEND,
-              and when needed we invite the wider community into prayerful input.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="reveal">
-            <p class="label">Staff Structure</p>
-            <h2>Five volunteer branches</h2>
-          </div>
-          <div class="grid cols-3">
-            <article class="card reveal">
-              <h3>Content</h3>
-              <p>Crafts resources, devotionals, and prompts that keep Scripture central.</p>
-            </article>
-            <article class="card reveal">
-              <h3>Fellowship</h3>
-              <p>Hosts community nights, small groups, and relational touchpoints.</p>
-            </article>
-            <article class="card reveal">
-              <h3>Builder</h3>
-              <p>Designs the spawn, landmarks, and shared spaces that inspire worshipful creativity.</p>
-            </article>
-            <article class="card reveal">
-              <h3>Moderation</h3>
-              <p>Protects the community with grace, fairness, and clear accountability.</p>
-            </article>
-            <article class="card reveal">
-              <h3>Developer</h3>
-              <p>Maintains plugins, tools, and the technical health of the server.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container grid cols-2">
-          <div class="panel reveal">
-            <p class="label">Roles</p>
-            <h2>Shepherds, volunteers, witnesses</h2>
-            <p>
-              Shepherds care for spiritual health, Volunteers serve with humility, and Witnesses help others
-              meet Jesus through authentic community.
-            </p>
-          </div>
-          <div class="panel reveal">
-            <p class="label">Encouragement</p>
-            <h2>Serve with rest</h2>
-            <p>
-              We serve Christ, not a position. Take sabbaticals when needed, lean on grace, and remember that
-              faithfulness is more valuable than visibility.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>
-          <p>© Christian SMP</p>
-          <p>"Let the word of Christ dwell in you richly." Colossians 3:16</p>
-        </div>
-        <div class="footer-links">
-          <a href="https://discord.gg/placeholder">Discord</a>
-          <a href="mailto:hello@christiansmp.com">Email</a>
+    <!-- CTA -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="callout fade-in">
+          <h3 class="callout__title">Join Our Fellowship</h3>
+          <p class="callout__text">
+            If your heart resonates with what you have read here, we invite you to join us.
+            Come and see what the Lord is building.
+          </p>
+          <a href="./#join" class="btn btn--primary">Join the Community</a>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script src="assets/js/main.js" defer></script>
-  </body>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__brand">Christian SMP</p>
+          <p class="footer__tagline">Soli Deo Gloria</p>
+        </div>
+        <nav class="footer__nav">
+          <a href="./" class="footer__link">Home</a>
+          <a href="about.html" class="footer__link">Who We Are</a>
+          <a href="projects.html" class="footer__link">Projects</a>
+          <a href="volunteers.html" class="footer__link">Volunteers</a>
+          <a href="ministries.html" class="footer__link">Ministries</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p>For the glory of God alone.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
 </html>

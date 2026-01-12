@@ -1,128 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Christian SMP | A Minecraft SMP Rooted in Christ</title>
-    <meta
-      name="description"
-      content="Christian SMP is a Minecraft survival community rooted in Christ, built for discipleship, fellowship, and creative worship."
-    />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container inner">
-        <a class="logo" href="index.html">Christian SMP</a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-          Menu
-        </button>
-        <nav class="nav-menu" id="primary-nav">
-          <a href="index.html" aria-current="page">Home</a>
-          <a href="about.html">About</a>
-          <a href="plans.html">Plans</a>
-          <a href="volunteers.html">Volunteers</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Christian SMP - A Minecraft community rooted in discipleship, fellowship, creativity, and reverence for Christ.">
+  <title>Christian SMP</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="./" class="header__logo">Christian SMP</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="nav" id="main-nav">
+        <a href="./" class="nav__link nav__link--active">Home</a>
+        <a href="about.html" class="nav__link">Who We Are</a>
+        <a href="projects.html" class="nav__link">Projects</a>
+        <a href="volunteers.html" class="nav__link">Volunteers</a>
+        <a href="ministries.html" class="nav__link">Ministries</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__bg">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Bloch-SermonOnTheMount.jpg"
+          alt="Sermon on the Mount by Carl Bloch"
+          loading="eager"
+        >
+      </div>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <h1 class="hero__title">Christian SMP</h1>
+        <p class="hero__subtitle">
+          A Minecraft community rooted in discipleship, fellowship, creativity, and reverence for Christ.
+        </p>
+        <div class="hero__actions">
+          <a href="#join" class="btn btn--primary btn--large">Join the Community</a>
+          <a href="about.html" class="btn btn--secondary btn--large">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is Christian SMP -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="section-header">
+          <span class="section-header__label">Welcome</span>
+          <h2 class="section-header__title">What is Christian SMP?</h2>
+        </div>
+
+        <div class="panel panel--lg fade-in">
+          <div class="prose" style="margin: 0 auto;">
+            <p>
+              Christian SMP is a Minecraft survival multiplayer community where believers gather to build,
+              create, and fellowship together under the lordship of Christ. We exist not merely to play a game,
+              but to cultivate a space where Christians can encourage one another, study Scripture,
+              and grow in faith while exercising the gift of creativity.
+            </p>
+            <p>
+              Here, discipleship matters more than diamonds. We seek to embody the virtues of patience,
+              humility, and charity in how we interact, build, and serve. Whether you are an experienced
+              builder or new to the game, you are welcome at our table.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Values -->
+    <section class="section bg-pattern">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__label">Our Foundation</span>
+          <h2 class="section-header__title">Community Values</h2>
+          <p class="section-header__text">
+            These values guide how we live and create together.
+          </p>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card fade-in">
+            <div class="card__icon">&#10013;</div>
+            <h3 class="card__title">Discipleship</h3>
+            <p class="card__text">
+              We follow Christ first. Everything we build and every conversation we have is oriented
+              toward growing in the knowledge and love of God.
+            </p>
+          </div>
+
+          <div class="card fade-in">
+            <div class="card__icon">&#9829;</div>
+            <h3 class="card__title">Fellowship</h3>
+            <p class="card__text">
+              We are not merely players on a server but brothers and sisters in Christ.
+              We bear one another's burdens and rejoice together.
+            </p>
+          </div>
+
+          <div class="card fade-in">
+            <div class="card__icon">&#9733;</div>
+            <h3 class="card__title">Creativity</h3>
+            <p class="card__text">
+              As image-bearers of the Creator, we honor God through building, designing,
+              and crafting with excellence and intention.
+            </p>
+          </div>
+
+          <div class="card fade-in">
+            <div class="card__icon">&#9670;</div>
+            <h3 class="card__title">Reverence</h3>
+            <p class="card__text">
+              We approach our community with seriousness and sobriety, understanding that
+              how we treat one another reflects our love for Christ.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events and Ministries Preview -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__label">Community Life</span>
+          <h2 class="section-header__title">Events and Ministries</h2>
+          <p class="section-header__text">
+            Beyond the blocks, we gather for prayer, Scripture study, and mutual encouragement.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card fade-in">
+            <h3 class="card__title">Bible Study</h3>
+            <p class="card__text">
+              Weekly gatherings to read and discuss Scripture together, growing in understanding
+              and application of God's Word.
+            </p>
+            <a href="ministries.html" class="btn btn--secondary mt-6">Learn More</a>
+          </div>
+
+          <div class="card fade-in">
+            <h3 class="card__title">Small Groups</h3>
+            <p class="card__text">
+              Intimate circles for deeper fellowship, accountability, and prayer.
+              A place to be known and to know others.
+            </p>
+            <a href="ministries.html" class="btn btn--secondary mt-6">Learn More</a>
+          </div>
+
+          <div class="card fade-in">
+            <h3 class="card__title">Prayer Nights</h3>
+            <p class="card__text">
+              Dedicated times to bring our requests before the Lord together,
+              interceding for one another and the world.
+            </p>
+            <a href="ministries.html" class="btn btn--secondary mt-6">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current Status -->
+    <section class="section" id="join">
+      <div class="container container--narrow">
+        <div class="section-header">
+          <span class="section-header__label">Server Status</span>
+          <h2 class="section-header__title">Join Us</h2>
+        </div>
+
+        <div class="status-card fade-in">
+          <div class="status-card__badge">
+            Coming Soon
+          </div>
+          <p class="status-card__ip">play.christiansmp.org</p>
+          <p class="status-card__version">Minecraft Java Edition 1.21+</p>
+
+          <div class="flex gap-4 justify-center mt-8" style="flex-wrap: wrap;">
+            <a href="#" class="btn btn--primary">Join Discord</a>
+            <a href="#" class="btn btn--secondary">Apply for Whitelist</a>
+          </div>
+
+          <p class="text-muted text-small mt-6">
+            Server launch date to be announced. Join our Discord for updates.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artwork Section -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2" style="gap: var(--space-8);">
+          <div class="art-block fade-in">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Gerard_van_Honthorst_-_Christ_before_the_High_Priest_-_WGA11650.jpg"
+              alt="Christ before the High Priest by Gerard van Honthorst"
+              loading="lazy"
+            >
+            <div class="art-block__caption">
+              Christ before the High Priest, Gerard van Honthorst (c. 1617)
+            </div>
+          </div>
+
+          <div class="panel panel--lg fade-in flex flex-col justify-center">
+            <h3 class="mb-6">A Space Set Apart</h3>
+            <div class="prose">
+              <p>
+                In an age of distraction and noise, we seek to create a space where believers
+                can rest, create, and grow together. This is not merely a gaming server but
+                a digital fellowship hall where the body of Christ gathers.
+              </p>
+              <p>
+                We invite you to leave behind the chaos of the world and enter a community
+                marked by peace, purpose, and the presence of God.
+              </p>
+            </div>
+            <a href="about.html" class="btn btn--secondary mt-8" style="align-self: flex-start;">
+              Read Our Story
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__brand">Christian SMP</p>
+          <p class="footer__tagline">Soli Deo Gloria</p>
+        </div>
+        <nav class="footer__nav">
+          <a href="./" class="footer__link">Home</a>
+          <a href="about.html" class="footer__link">Who We Are</a>
+          <a href="projects.html" class="footer__link">Projects</a>
+          <a href="volunteers.html" class="footer__link">Volunteers</a>
+          <a href="ministries.html" class="footer__link">Ministries</a>
         </nav>
       </div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="container hero-content">
-          <div class="reveal">
-            <p class="label">Welcome to Christian SMP</p>
-            <h1>A Minecraft SMP Rooted in Christ</h1>
-            <p>
-              Christian SMP is a discipleship-focused survival server where believers build together, worship
-              through creativity, and encourage one another to follow Jesus with courage and joy.
-            </p>
-            <div class="hero-actions">
-              <a class="button primary" href="https://discord.gg/placeholder">Join the Community</a>
-              <a class="button secondary" href="volunteers.html">Serve as a Volunteer</a>
-            </div>
-          </div>
-          <div class="placeholder-art reveal">
-            <div>
-              <p class="label">Art Placeholder</p>
-              <p>Classical Christian artwork will be featured here.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="panel reveal">
-            <p class="label">What is Christian SMP?</p>
-            <h2>A place to build, rest, and follow Jesus together</h2>
-            <p>
-              We exist to cultivate a strong online Christian community where faith is shared, discipleship is
-              practiced, and creative expression flourishes in a respectful, Scripture-centered environment.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="reveal">
-            <p class="label">What You'll Experience</p>
-            <h2>Community marked by Scripture and care</h2>
-          </div>
-          <div class="grid cols-3">
-            <article class="card reveal">
-              <h3>Bible-centered community</h3>
-              <p>Gather with believers who want to honor Christ in conversation, creativity, and daily play.</p>
-            </article>
-            <article class="card reveal">
-              <h3>Grief-free survival</h3>
-              <p>Build with confidence in a well-moderated world that prioritizes respect and accountability.</p>
-            </article>
-            <article class="card reveal">
-              <h3>Meaningful events</h3>
-              <p>Join Bible studies, themed builds, and fellowship nights that point us back to Jesus.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="panel reveal">
-            <p class="label">Current Status</p>
-            <h2>Soft launch in progress</h2>
-            <div class="status">
-              <div>
-                <span class="label">Server IP</span>
-                <p>coming-soon.christiansmp.com</p>
-              </div>
-              <div>
-                <span class="label">Version</span>
-                <p>Java 1.20.x</p>
-              </div>
-              <div>
-                <span class="label">Phase</span>
-                <p>Invite-only beta &amp; prayerful testing</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>
-          <p>© Christian SMP</p>
-          <p>"Let the word of Christ dwell in you richly." Colossians 3:16</p>
-        </div>
-        <div class="footer-links">
-          <a href="https://discord.gg/placeholder">Discord</a>
-          <a href="mailto:hello@christiansmp.com">Email</a>
-        </div>
+      <div class="footer__bottom">
+        <p>For the glory of God alone.</p>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="assets/js/main.js" defer></script>
-  </body>
+  <script src="assets/js/main.js"></script>
+</body>
 </html>

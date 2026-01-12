@@ -1,146 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Volunteers | Christian SMP</title>
-    <meta
-      name="description"
-      content="Learn how to serve with Christian SMP and explore volunteer branches and expectations." 
-    />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container inner">
-        <a class="logo" href="index.html">Christian SMP</a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-          Menu
-        </button>
-        <nav class="nav-menu" id="primary-nav">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="plans.html">Plans</a>
-          <a href="volunteers.html" aria-current="page">Volunteers</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Serve with Christian SMP - volunteer opportunities, staff structure, and how to apply.">
+  <title>Volunteers - Christian SMP</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="./" class="header__logo">Christian SMP</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="nav" id="main-nav">
+        <a href="./" class="nav__link">Home</a>
+        <a href="about.html" class="nav__link">Who We Are</a>
+        <a href="projects.html" class="nav__link">Projects</a>
+        <a href="volunteers.html" class="nav__link nav__link--active">Volunteers</a>
+        <a href="ministries.html" class="nav__link">Ministries</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero hero--page">
+      <div class="hero__bg">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/09/Fusswaschung_Meister_des_Hausbuches.jpg"
+          alt="Christ Washing the Feet of the Apostles, Meister des Hausbuches"
+          loading="eager"
+        >
+      </div>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <h1 class="hero__title">Volunteers</h1>
+        <p class="hero__subtitle">
+          Serving Christ through serving His people.
+        </p>
+      </div>
+    </section>
+
+    <!-- Serving in Secret -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="content-block fade-in">
+          <span class="section-header__label">Service</span>
+          <h2 class="content-block__title mt-4">Serving Christ in Secret</h2>
+          <div class="prose">
+            <p>
+              In our community, service is not about titles, recognition, or power.
+              We follow the example of Christ, who came not to be served but to serve.
+              Those who lead among us are those who serve most faithfully.
+            </p>
+            <p>
+              We do not elevate volunteers above other members. A staff role is not
+              a position of honor but a call to greater responsibility and humility.
+              Those who serve well do so quietly, seeking the good of others rather
+              than their own visibility.
+            </p>
+            <p>
+              If you are looking for status or influence, this is not the place for you.
+              But if you desire to pour yourself out for the sake of your brothers and
+              sisters in Christ, we welcome your service.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Branches -->
+    <section class="section bg-pattern">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__label">Structure</span>
+          <h2 class="section-header__title">Service Branches</h2>
+          <p class="section-header__text">
+            Our volunteer structure is organized into branches, each with specific areas of responsibility.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card fade-in">
+            <h3 class="card__title">Content Branch</h3>
+            <p class="card__text">
+              Creating resources, documentation, and media that edify the community.
+            </p>
+            <ul class="card__list">
+              <li>Writing guides and tutorials</li>
+              <li>Creating graphics and visual content</li>
+              <li>Managing social media presence</li>
+              <li>Producing video content</li>
+            </ul>
+          </div>
+
+          <div class="card fade-in">
+            <h3 class="card__title">Fellowship Branch</h3>
+            <p class="card__text">
+              Fostering community, welcoming newcomers, and facilitating connection.
+            </p>
+            <ul class="card__list">
+              <li>Welcoming and onboarding new members</li>
+              <li>Organizing community events</li>
+              <li>Facilitating small groups</li>
+              <li>Checking in on inactive members</li>
+            </ul>
+          </div>
+
+          <div class="card fade-in">
+            <h3 class="card__title">Builder Branch</h3>
+            <p class="card__text">
+              Constructing spawn, community builds, and maintaining the server world.
+            </p>
+            <ul class="card__list">
+              <li>Designing and building spawn areas</li>
+              <li>Creating community structures</li>
+              <li>Terraforming and landscaping</li>
+              <li>Mentoring new builders</li>
+            </ul>
+          </div>
+
+          <div class="card fade-in">
+            <h3 class="card__title">Moderation Branch</h3>
+            <p class="card__text">
+              Maintaining peace and order, handling conflicts with grace and wisdom.
+            </p>
+            <ul class="card__list">
+              <li>Monitoring chat and behavior</li>
+              <li>Addressing rule violations</li>
+              <li>Mediating conflicts</li>
+              <li>Protecting the community</li>
+            </ul>
+          </div>
+
+          <div class="card fade-in">
+            <h3 class="card__title">Developer Branch</h3>
+            <p class="card__text">
+              Building and maintaining the technical infrastructure that powers the server.
+            </p>
+            <ul class="card__list">
+              <li>Plugin development</li>
+              <li>Server administration</li>
+              <li>Website and tools development</li>
+              <li>Bot and integration development</li>
+            </ul>
+          </div>
+
+          <div class="card panel--wine fade-in">
+            <h3 class="card__title">All Branches</h3>
+            <p class="card__text">
+              Regardless of branch, all volunteers share these responsibilities.
+            </p>
+            <ul class="card__list">
+              <li>Praying for the community</li>
+              <li>Modeling Christlike character</li>
+              <li>Submitting to leadership</li>
+              <li>Communicating with transparency</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Volunteer Traits -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="content-block fade-in">
+          <span class="section-header__label">Character</span>
+          <h2 class="content-block__title mt-4">What We Look For</h2>
+          <div class="prose">
+            <p>
+              We do not look primarily for skill or experience. We look for character.
+              A servant with a teachable heart will grow. A skilled person without
+              humility will cause harm.
+            </p>
+          </div>
+
+          <div class="grid grid-2 mt-8" style="gap: var(--space-6);">
+            <div class="panel panel--sm">
+              <h4 class="mb-4">Spiritual Maturity</h4>
+              <p class="text-secondary text-small">
+                A demonstrated walk with Christ, regular engagement with Scripture and prayer,
+                and evidence of the fruit of the Spirit in daily life.
+              </p>
+            </div>
+
+            <div class="panel panel--sm">
+              <h4 class="mb-4">Teachability</h4>
+              <p class="text-secondary text-small">
+                A willingness to learn, receive correction, and grow. An absence of
+                defensiveness when given feedback.
+              </p>
+            </div>
+
+            <div class="panel panel--sm">
+              <h4 class="mb-4">Humility</h4>
+              <p class="text-secondary text-small">
+                A right estimation of oneself. No desire for status or recognition.
+                A willingness to do unglamorous work.
+              </p>
+            </div>
+
+            <div class="panel panel--sm">
+              <h4 class="mb-4">Emotional Stability</h4>
+              <p class="text-secondary text-small">
+                The ability to remain calm under pressure, handle criticism gracefully,
+                and not be easily offended.
+              </p>
+            </div>
+
+            <div class="panel panel--sm">
+              <h4 class="mb-4">Conflict Resolution</h4>
+              <p class="text-secondary text-small">
+                The ability to address disagreements biblically, without gossip,
+                seeking reconciliation and peace.
+              </p>
+            </div>
+
+            <div class="panel panel--sm">
+              <h4 class="mb-4">Willingness to Rest</h4>
+              <p class="text-secondary text-small">
+                An understanding that service must be sustainable. The wisdom to
+                step back when needed without guilt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apply CTA -->
+    <section class="section bg-pattern">
+      <div class="container container--narrow">
+        <div class="callout fade-in">
+          <h3 class="callout__title">Apply to Serve</h3>
+          <p class="callout__text">
+            If the Lord is stirring your heart toward service, we invite you to apply.
+            Applications are reviewed prayerfully.
+          </p>
+          <a href="https://forms.google.com" class="btn btn--primary btn--large" target="_blank" rel="noopener noreferrer">
+            Submit Application
+          </a>
+          <p class="text-muted text-small mt-4">
+            Opens in Google Forms
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="section-header">
+          <span class="section-header__label">Questions</span>
+          <h2 class="section-header__title">Frequently Asked</h2>
+        </div>
+
+        <div class="faq fade-in">
+          <div class="faq__item">
+            <h4 class="faq__question">How much time is expected?</h4>
+            <p class="faq__answer">
+              This varies by role and season. We ask for consistency more than quantity.
+              A few hours per week of faithful service is more valuable than sporadic bursts
+              of intense activity. We also encourage volunteers to communicate openly about
+              their capacity and to rest when needed.
+            </p>
+          </div>
+
+          <div class="faq__item">
+            <h4 class="faq__question">Is there an age requirement?</h4>
+            <p class="faq__answer">
+              We do not have a strict age requirement, but we do look for spiritual maturity
+              and emotional stability that typically comes with time. Younger applicants will
+              be considered if they demonstrate these qualities and have parental support.
+            </p>
+          </div>
+
+          <div class="faq__item">
+            <h4 class="faq__question">What training is provided?</h4>
+            <p class="faq__answer">
+              All volunteers receive orientation on our values, expectations, and practical
+              tools for their role. Ongoing training and mentorship are provided by branch
+              leads. We believe in investing in our volunteers, not just using them.
+            </p>
+          </div>
+
+          <div class="faq__item">
+            <h4 class="faq__question">What are the spiritual expectations?</h4>
+            <p class="faq__answer">
+              Volunteers are expected to be professing Christians who are actively pursuing
+              growth in their faith. This includes regular Scripture reading, prayer, and
+              participation in a local church community. We do not require agreement on
+              secondary theological issues, but core gospel convictions are essential.
+            </p>
+          </div>
+
+          <div class="faq__item">
+            <h4 class="faq__question">Can I step down if needed?</h4>
+            <p class="faq__answer">
+              Absolutely. We understand that seasons change. If you need to step back for
+              any reason, we ask only that you communicate openly with your branch lead
+              so we can plan accordingly. Stepping down is not failure; it is wisdom.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__brand">Christian SMP</p>
+          <p class="footer__tagline">Soli Deo Gloria</p>
+        </div>
+        <nav class="footer__nav">
+          <a href="./" class="footer__link">Home</a>
+          <a href="about.html" class="footer__link">Who We Are</a>
+          <a href="projects.html" class="footer__link">Projects</a>
+          <a href="volunteers.html" class="footer__link">Volunteers</a>
+          <a href="ministries.html" class="footer__link">Ministries</a>
         </nav>
       </div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="container hero-content">
-          <div class="reveal">
-            <p class="label">Volunteer With Us</p>
-            <h1>Serving Christ together</h1>
-            <p>
-              All staff roles are volunteer positions. We serve to honor Jesus, shepherd the community, and
-              build a safe, welcoming place for believers.
-            </p>
-          </div>
-          <div class="placeholder-art reveal">
-            <div>
-              <p class="label">Art Placeholder</p>
-              <p>Reserve space for a painting of service and fellowship.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="reveal">
-            <p class="label">Volunteer Branches</p>
-            <h2>Ways to serve</h2>
-          </div>
-          <div class="grid cols-3">
-            <article class="card reveal">
-              <h3>Content</h3>
-              <ul class="list">
-                <li>Write devotionals and prompts.</li>
-                <li>Coordinate Bible-study resources.</li>
-              </ul>
-            </article>
-            <article class="card reveal">
-              <h3>Fellowship</h3>
-              <ul class="list">
-                <li>Host community events.</li>
-                <li>Encourage newcomers and build relationships.</li>
-              </ul>
-            </article>
-            <article class="card reveal">
-              <h3>Builder</h3>
-              <ul class="list">
-                <li>Design inspiring builds.</li>
-                <li>Collaborate on themed projects.</li>
-              </ul>
-            </article>
-            <article class="card reveal">
-              <h3>Moderation</h3>
-              <ul class="list">
-                <li>Maintain a respectful environment.</li>
-                <li>Respond with grace and accountability.</li>
-              </ul>
-            </article>
-            <article class="card reveal">
-              <h3>Developer</h3>
-              <ul class="list">
-                <li>Manage plugins and configs.</li>
-                <li>Keep the server stable and secure.</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="callout reveal">
-            <p class="label">Ready to Serve?</p>
-            <h2>We would love to hear from you</h2>
-            <p>
-              We ask for spiritual maturity, teachability, grace, and a commitment to Christ. Life and rest
-              come first, and we will always encourage healthy rhythms.
-            </p>
-            <div class="hero-actions">
-              <a class="button primary" href="https://forms.gle/your-volunteer-form">Apply to Volunteer</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container panel reveal">
-          <p class="label">FAQ</p>
-          <h2>Questions we often hear</h2>
-          <div class="faq">
-            <h3>How much time is required?</h3>
-            <p>We ask for steady availability, but we honor seasons of rest and real life commitments.</p>
-          </div>
-          <div class="faq">
-            <h3>Is there an age requirement?</h3>
-            <p>We evaluate maturity and character more than age; guidelines will be shared in the application.</p>
-          </div>
-          <div class="faq">
-            <h3>Is training provided?</h3>
-            <p>Yes. Every branch has onboarding, shadowing, and ongoing support.</p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>
-          <p>© Christian SMP</p>
-          <p>"Let the word of Christ dwell in you richly." Colossians 3:16</p>
-        </div>
-        <div class="footer-links">
-          <a href="https://discord.gg/placeholder">Discord</a>
-          <a href="mailto:hello@christiansmp.com">Email</a>
-        </div>
+      <div class="footer__bottom">
+        <p>For the glory of God alone.</p>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="assets/js/main.js" defer></script>
-  </body>
+  <script src="assets/js/main.js"></script>
+</body>
 </html>

@@ -478,6 +478,16 @@ p { max-width: var(--max-width-prose); }
   margin: 0 auto;
 }
 
+.page-intro-hero__card {
+  display: inline-block;
+  max-width: 720px;
+  width: auto;
+  padding: var(--space-6) var(--space-12);
+  background: rgba(14, 14, 17, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+}
+
 .page-intro-hero__label {
   display: inline-block;
   font-size: var(--text-xs);
@@ -493,7 +503,7 @@ p { max-width: var(--max-width-prose); }
 
 .page-intro-hero__subtitle {
   color: rgba(255, 255, 255, 0.95);
-  max-width: 50ch;
+  max-width: 44ch;
   margin: 0 auto;
   line-height: 1.7;
 }

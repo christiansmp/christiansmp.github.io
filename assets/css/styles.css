@@ -3,17 +3,18 @@
    ============================================================ */
 
 :root {
-  /* Colors - Dark palette */
-  --color-bg: #0a0a0a;
-  --color-surface: rgba(255, 255, 255, 0.03);
-  --color-surface-hover: rgba(255, 255, 255, 0.06);
+  /* Colors - Dark palette (softer, not pure black) */
+  --color-bg: #141418;
+  --color-bg-dark: #0e0e11;
+  --color-surface: rgba(255, 255, 255, 0.04);
+  --color-surface-hover: rgba(255, 255, 255, 0.07);
 
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-border-hover: rgba(255, 255, 255, 0.15);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-hover: rgba(255, 255, 255, 0.18);
 
   --color-text: #e8e6e3;
-  --color-text-secondary: rgba(255, 255, 255, 0.65);
-  --color-text-muted: rgba(255, 255, 255, 0.4);
+  --color-text-secondary: rgba(255, 255, 255, 0.7);
+  --color-text-muted: rgba(255, 255, 255, 0.45);
 
   /* Typography */
   --font-serif: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
@@ -335,7 +336,7 @@ p { max-width: var(--max-width-prose); }
 }
 
 /* ============================================================
-   FULL ARTWORK - Uncropped images
+   FULL ARTWORK - Uncropped images with gradient blend
    ============================================================ */
 .artwork {
   position: relative;
@@ -350,14 +351,14 @@ p { max-width: var(--max-width-prose); }
   /* No cropping - show full image */
 }
 
-/* Subtle edge fade for smoother transitions */
+/* Gradient fade for smoother transitions */
 .artwork::before,
 .artwork::after {
   content: '';
   position: absolute;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 120px;
   pointer-events: none;
   z-index: 1;
 }
@@ -373,42 +374,44 @@ p { max-width: var(--max-width-prose); }
 }
 
 /* ============================================================
-   PAGE INTRO HERO - Title section with artwork background
+   PAGE INTRO HERO - Full artwork with text below
    ============================================================ */
 .page-intro-hero {
   position: relative;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: calc(var(--header-height) + var(--space-12)) var(--space-6) var(--space-12);
-  overflow: hidden;
+  margin-top: var(--header-height);
 }
 
-.page-intro-hero__bg {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-}
-
-.page-intro-hero__bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.page-intro-hero__card {
+/* Full uncropped artwork */
+.page-intro-hero__artwork {
   position: relative;
-  z-index: 1;
-  background: rgba(10, 10, 10, 0.85);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-xl);
-  padding: var(--space-12) var(--space-16);
-  max-width: 700px;
+  width: 100%;
+}
+
+.page-intro-hero__artwork img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Gradient blend at bottom of artwork */
+.page-intro-hero__artwork::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to bottom, transparent, var(--color-bg));
+  pointer-events: none;
+}
+
+/* Text content below artwork */
+.page-intro-hero__content {
+  position: relative;
   text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  padding: var(--space-16) var(--space-6);
+  margin-top: -100px;
+  z-index: 1;
 }
 
 .page-intro-hero__label {
@@ -432,13 +435,9 @@ p { max-width: var(--max-width-prose); }
 }
 
 /* Home page hero - larger */
-.page-intro-hero--home {
-  min-height: 90vh;
-}
-
-.page-intro-hero--home .page-intro-hero__card {
-  padding: var(--space-16) var(--space-20);
-  max-width: 800px;
+.page-intro-hero--home .page-intro-hero__content {
+  padding: var(--space-20) var(--space-6);
+  margin-top: -120px;
 }
 
 .page-intro-hero--home .page-intro-hero__title {
@@ -454,13 +453,17 @@ p { max-width: var(--max-width-prose); }
 }
 
 @media (max-width: 768px) {
-  .page-intro-hero__card {
-    padding: var(--space-8) var(--space-6);
-    margin: 0 var(--space-4);
+  .page-intro-hero__content {
+    padding: var(--space-12) var(--space-4);
+    margin-top: -80px;
   }
 
-  .page-intro-hero--home .page-intro-hero__card {
-    padding: var(--space-10) var(--space-6);
+  .page-intro-hero--home .page-intro-hero__content {
+    margin-top: -80px;
+  }
+
+  .page-intro-hero__artwork::after {
+    height: 150px;
   }
 }
 

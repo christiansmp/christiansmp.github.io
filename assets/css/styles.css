@@ -346,7 +346,7 @@ p { max-width: var(--max-width-prose); }
 }
 
 /* ============================================================
-   FULL ARTWORK - Uncropped images with gradient blend
+   FULL ARTWORK - Uncropped images with gradient blend and text
    ============================================================ */
 .artwork {
   position: relative;
@@ -358,34 +358,86 @@ p { max-width: var(--max-width-prose); }
   width: 100%;
   height: auto;
   display: block;
-  /* No cropping - show full image */
 }
 
 /* Gradient fade for smoother transitions */
-.artwork::before,
-.artwork::after {
+.artwork::before {
   content: '';
   position: absolute;
+  top: 0;
   left: 0;
   right: 0;
   height: 120px;
+  background: linear-gradient(to bottom, var(--color-bg), transparent);
   pointer-events: none;
   z-index: 1;
 }
 
-.artwork::before {
-  top: 0;
-  background: linear-gradient(to bottom, var(--color-bg), transparent);
+.artwork::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to top, var(--color-bg), transparent);
+  pointer-events: none;
+  z-index: 1;
 }
 
-.artwork::after {
-  bottom: 0;
-  background: linear-gradient(to top, var(--color-bg), transparent);
+/* Centered text overlay on artwork */
+.artwork__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: var(--space-8);
+  z-index: 2;
+  width: 100%;
+  max-width: 700px;
+}
+
+.artwork__label {
+  display: inline-block;
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: var(--space-3);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.artwork__title {
+  font-family: var(--font-serif);
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl));
+  margin-bottom: var(--space-4);
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.9), 0 4px 60px rgba(0, 0, 0, 0.6);
+}
+
+.artwork__text {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 50ch;
+  margin: 0 auto;
+  line-height: 1.7;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9), 0 4px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Add radial overlay when artwork has content */
+.artwork--with-text::before {
+  height: 100%;
+  background:
+    linear-gradient(to bottom, var(--color-bg), transparent 15%),
+    radial-gradient(ellipse at center, rgba(20, 20, 24, 0.4) 0%, transparent 70%);
+}
+
+.artwork--with-text::after {
+  height: 100%;
+  background: linear-gradient(to top, var(--color-bg), transparent 15%);
 }
 
 /* ============================================================
-   PAGE INTRO HERO - Full artwork with overlaid text
-   Natural image ratios, text overlaid with subtle background
+   PAGE INTRO HERO - Full artwork with centered text overlay
    ============================================================ */
 .page-intro-hero {
   position: relative;
@@ -404,73 +456,67 @@ p { max-width: var(--max-width-prose); }
   display: block;
 }
 
-/* Gradient overlay for smooth transition to background */
+/* Gradient overlay for text readability and transition */
+.page-intro-hero__artwork::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(20, 20, 24, 0.5) 0%,
+    rgba(20, 20, 24, 0.3) 50%,
+    transparent 80%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
 .page-intro-hero__artwork::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 50%;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(20, 20, 24, 0.6) 60%,
-    var(--color-bg) 100%
-  );
+  height: 30%;
+  background: linear-gradient(to bottom, transparent, var(--color-bg));
   pointer-events: none;
-}
-
-/* Text content overlaid at bottom of artwork */
-.page-intro-hero__content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  padding: var(--space-12) var(--space-6);
-  padding-bottom: var(--space-12);
   z-index: 1;
 }
 
-/* Subtle text background for readability */
-.page-intro-hero__text-bg {
-  display: inline-block;
-  padding: var(--space-6) var(--space-10);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(20, 20, 24, 0.7) 0%,
-    rgba(20, 20, 24, 0.4) 50%,
-    transparent 80%
-  );
-  border-radius: 50%;
+/* Text content centered on artwork */
+.page-intro-hero__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: var(--space-8);
+  z-index: 2;
+  width: 100%;
+  max-width: 800px;
 }
 
 .page-intro-hero__label {
   display: inline-block;
   font-size: var(--text-xs);
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin-bottom: var(--space-4);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .page-intro-hero__title {
   margin-bottom: var(--space-4);
-  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.8), 0 4px 60px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.9), 0 4px 60px rgba(0, 0, 0, 0.6);
 }
 
 .page-intro-hero__subtitle {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   max-width: 50ch;
   margin: 0 auto;
   line-height: 1.7;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8), 0 4px 40px rgba(0, 0, 0, 0.5);
-}
-
-/* Home page hero */
-.page-intro-hero--home .page-intro-hero__content {
-  padding-bottom: var(--space-16);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9), 0 4px 40px rgba(0, 0, 0, 0.6);
 }
 
 .page-intro-hero--home .page-intro-hero__title {
@@ -487,16 +533,7 @@ p { max-width: var(--max-width-prose); }
 
 @media (max-width: 768px) {
   .page-intro-hero__content {
-    padding: var(--space-8) var(--space-4);
-    padding-bottom: var(--space-8);
-  }
-
-  .page-intro-hero--home .page-intro-hero__content {
-    padding-bottom: var(--space-10);
-  }
-
-  .page-intro-hero__text-bg {
-    padding: var(--space-4) var(--space-6);
+    padding: var(--space-6) var(--space-4);
   }
 }
 

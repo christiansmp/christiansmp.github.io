@@ -374,17 +374,26 @@ p { max-width: var(--max-width-prose); }
 }
 
 /* ============================================================
-   PAGE INTRO HERO - Full artwork with text below
+   PAGE INTRO HERO - Full artwork with overlaid text
+   Text appears at consistent scroll position across all pages
    ============================================================ */
 .page-intro-hero {
   position: relative;
   margin-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  flex-direction: column;
 }
 
-/* Full uncropped artwork */
+/* Full uncropped artwork container */
 .page-intro-hero__artwork {
   position: relative;
   width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: var(--color-bg);
 }
 
 .page-intro-hero__artwork img {
@@ -393,31 +402,40 @@ p { max-width: var(--max-width-prose); }
   display: block;
 }
 
-/* Gradient blend at bottom of artwork */
+/* Gradient overlay for text readability */
 .page-intro-hero__artwork::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 200px;
-  background: linear-gradient(to bottom, transparent, var(--color-bg));
+  height: 60%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(20, 20, 24, 0.5) 40%,
+    rgba(20, 20, 24, 0.9) 80%,
+    var(--color-bg) 100%
+  );
   pointer-events: none;
 }
 
-/* Text content below artwork */
+/* Text content overlaid at bottom of artwork */
 .page-intro-hero__content {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   text-align: center;
-  padding: var(--space-16) var(--space-6);
-  margin-top: -100px;
+  padding: var(--space-12) var(--space-6);
+  padding-bottom: var(--space-16);
   z-index: 1;
 }
 
 .page-intro-hero__label {
   display: inline-block;
   font-size: var(--text-xs);
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin-bottom: var(--space-4);
@@ -425,19 +443,20 @@ p { max-width: var(--max-width-prose); }
 
 .page-intro-hero__title {
   margin-bottom: var(--space-4);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 
 .page-intro-hero__subtitle {
-  color: var(--color-text-secondary);
+  color: rgba(255, 255, 255, 0.85);
   max-width: 50ch;
   margin: 0 auto;
   line-height: 1.7;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Home page hero - larger */
+/* Home page hero */
 .page-intro-hero--home .page-intro-hero__content {
-  padding: var(--space-20) var(--space-6);
-  margin-top: -120px;
+  padding-bottom: var(--space-20);
 }
 
 .page-intro-hero--home .page-intro-hero__title {
@@ -452,18 +471,40 @@ p { max-width: var(--max-width-prose); }
   margin-top: var(--space-8);
 }
 
+/* Wide/landscape images need extra top padding to normalize height */
+.page-intro-hero--wide .page-intro-hero__artwork {
+  padding-top: 20vh;
+}
+
+/* Very wide images (like Last Supper 2:1) */
+.page-intro-hero--extra-wide .page-intro-hero__artwork {
+  padding-top: 35vh;
+}
+
 @media (max-width: 768px) {
+  .page-intro-hero {
+    min-height: auto;
+  }
+
   .page-intro-hero__content {
-    padding: var(--space-12) var(--space-4);
-    margin-top: -80px;
+    padding: var(--space-8) var(--space-4);
+    padding-bottom: var(--space-10);
   }
 
   .page-intro-hero--home .page-intro-hero__content {
-    margin-top: -80px;
+    padding-bottom: var(--space-12);
   }
 
   .page-intro-hero__artwork::after {
-    height: 150px;
+    height: 70%;
+  }
+
+  .page-intro-hero--wide .page-intro-hero__artwork {
+    padding-top: 10vh;
+  }
+
+  .page-intro-hero--extra-wide .page-intro-hero__artwork {
+    padding-top: 15vh;
   }
 }
 

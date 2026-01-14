@@ -482,7 +482,7 @@ p { max-width: var(--max-width-prose); }
   display: inline-block;
   max-width: 720px;
   width: auto;
-  padding: var(--space-6) var(--space-12);
+  padding: var(--space-6) var(--space-16);
   background: rgba(14, 14, 17, 0.28);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-lg);
@@ -969,7 +969,7 @@ p { max-width: var(--max-width-prose); }
 
 .footer__left {
   text-align: left;
-  justify-self: center;
+  justify-self: start;
 }
 
 .footer__social {
